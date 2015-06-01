@@ -190,11 +190,13 @@ class jResponseSitemap extends jResponse {
         if (!$parsed_url || !is_array($parsed_url)) {
             return false;
         }
-        $http = new jHttp($parsed_url['host']);
-        $http->get($parsed_url['path'] . '?' . $parsed_url['query']);
-        if ($http->getStatus() != 200) {
+        
+        $http = new \GuzzleHttp\Client(array('base_uri' => $parsed_url['host']));
+        $res = $http->get($parsed_url['path'] . '?' . $parsed_url['query']);
+        if ( 200 !== $res->getStatusCode()) {
             return false;
         }
+        $content = $res->getBody();
         return true;
     }
 
