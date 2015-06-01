@@ -1,0 +1,30 @@
+{
+    "name": "jelix/sitemap-module",
+    "type": "jelix-module",
+    "description": "module for Jelix, providing a Jelix Response object to generate a sitemap.",
+    "keywords": ["sitemap", "jelix"],
+    "homepage": "http://jelix.org",
+    "license": "LGPL-2.1",
+    "authors": [
+        {
+            "name": "Laurent Jouanneau",
+            "email": "laurent@jelix.org"
+        },
+        {
+            "name":"Baptiste Toinot"
+        }
+    ],
+    "require": {
+    },
+    "minimum-stability": "stable",
+    "extra" : {
+        "jelix" : {
+            "modules": [
+                "jsitemap"
+            ]
+        },
+        "branch-alias": {
+            "dev-master": "1.7.x-dev"
+        }
+    }
+}
