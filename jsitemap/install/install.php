@@ -16,8 +16,8 @@ class jsitemapModuleInstaller extends jInstallerModule {
             return;
         }
 
-        if (null == $this->config->getValue('sitemap','responses', null, true)) {
-            $this->config->setValue('sitemap','jsitemap~jResponseSitemap','responses', null, true);
+        if (null == $this->entryPoint->getMainConfigIni()->getValue('sitemap','responses', null, true)) {
+            $this->entryPoint->getMainConfigIni()->setValue('sitemap','jsitemap~jResponseSitemap','responses', null, true);
         }
     }
 }
