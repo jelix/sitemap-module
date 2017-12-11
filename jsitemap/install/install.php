@@ -8,9 +8,9 @@
 
 /**
  */
-class jsitemapModuleInstaller extends jInstallerModule2 {
+class jsitemapModuleInstaller extends \Jelix\Installer\ModuleInstaller {
 
-    function installEntrypoint(jInstallerEntryPoint2 $entryPoint) {
+    function installEntrypoint(\Jelix\Installer\EntryPoint $entryPoint) {
 
         if (!$this->firstExec('config')) {
             return;
