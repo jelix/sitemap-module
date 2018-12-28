@@ -10,9 +10,9 @@
  */
 class jsitemapModuleConfigurator extends \Jelix\Installer\Module\Configurator {
 
-    function configure() {
-        if (null == $this->getConfigIni()->getValue('sitemap','responses', null, true)) {
-            $this->getConfigIni()->setValue('sitemap','jsitemap~jResponseSitemap','responses', null, true);
+    function configure(\Jelix\Installer\Module\API\ConfigurationHelpers $helpers) {
+        if (null == $helpers->getConfigIni()->getValue('sitemap','responses', null, true)) {
+            $helpers->getConfigIni()->setValue('sitemap','jsitemap~jResponseSitemap','responses', null, true);
         }
     }
 }
