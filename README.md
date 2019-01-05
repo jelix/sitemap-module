@@ -17,19 +17,16 @@ In your project:
 composer require "jelix/sitemap-module"
 ```
 
+Launch the configurator for your application to enable the module
 
-Then declare the module into the configuration of your application
-
-```ini
-[modules]
-
-jsitemap.access=1
+```bash
+php yourapp/cmd.php module:configure jsitemap
 ```
 
-And then:
+And then launch the installer to activate the module
 
-```
-php yourapp/cmd.php install
+```bash
+php yourapp/install/installer.php
 ```
 
 Usage
