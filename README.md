@@ -20,7 +20,7 @@ composer require "jelix/sitemap-module"
 Launch the configurator for your application to enable the module
 
 ```bash
-php yourapp/cmd.php module:configure jsitemap
+php yourapp/dev.php module:configure jsitemap
 ```
 
 And then launch the installer to activate the module
